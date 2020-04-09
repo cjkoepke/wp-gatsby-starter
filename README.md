@@ -23,8 +23,6 @@ Eventually, they will support [WP GraphQL](https://github.com/wp-graphql/wp-grap
 
 Regardless, setting up the styles, components, and overall architecture takes time. This project looks to join both the **WordPress environment as well as the Gatsby project** together.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
-
 ## Getting Started
 
 1.  **Clone the Project**
@@ -67,8 +65,6 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     ```
 
     Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`\_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).
 
 ## Project Hierarchy
 
