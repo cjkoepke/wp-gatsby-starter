@@ -1,0 +1,13 @@
+.button {
+  background: var(--link);
+  border-radius: 4px;
+  color: var(--gray-2);
+  display: inline-block;
+  padding: 12px 20px;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    background: var(--base);
+  }
+}

@@ -1,0 +1,7 @@
+.blockquote {
+  border-left: 8px solid var(--base);
+  font-size: var(--h4);
+  font-weight: 700;
+  margin-left: 0;
+  padding-left: 20px;
+}

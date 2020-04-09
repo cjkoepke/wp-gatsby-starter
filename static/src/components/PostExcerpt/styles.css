@@ -1,0 +1,16 @@
+.preview {
+  margin-bottom: 40px;
+  max-width: 768px;
+
+  &:first-of-type {
+    margin-top: 40px;
+  }
+}
+
+.preview__title,
+.preview__title a {
+  color: var(--base);
+  font-size: var(--h4);
+  text-decoration: none;
+  margin: 0;
+}

@@ -1,0 +1,21 @@
+.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+
+  & li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  & a {
+    font-size: var(--small);
+    font-weight: 300;
+    text-decoration: none;
+
+    &.active {
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.header {
+  border-bottom: 4px solid var(--base);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.header__title {
+  font-size: var(--h4);
+  margin-top: 0;
+
+  &,
+  & a {
+    color: var(--base);
+    font-weight: 900;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.header__desc {
+  font-size: var(--small);
+  font-weight: 400;
+  margin: 0;
+}

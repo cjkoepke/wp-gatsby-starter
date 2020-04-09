@@ -1,0 +1,24 @@
+.image {
+  margin: 0;
+  overflow: hidden;
+  width: auto;
+}
+
+.image--align-left {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.image--align-right {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+
+.image__caption {
+  clear: both;
+  display: block;
+  font-size: var(--small);
+  font-style: italic;
+  padding: 2px;
+  width: 100%;
+}

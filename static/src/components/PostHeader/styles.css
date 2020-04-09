@@ -1,0 +1,18 @@
+.post-meta {
+  margin-bottom: 20px;
+}
+
+.post-meta__info {
+  align-items: center;
+  display: inline-flex;
+
+  & .avatar {
+    margin-right: 10px;
+
+    &::after {
+      content: "/";
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}

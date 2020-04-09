@@ -1,0 +1,29 @@
+.p--small {
+  font-size: var(--small);
+}
+
+.p--large {
+  font-size: var(--h4);
+}
+
+.p--larger {
+  font-size: var(--h3);
+}
+
+.p--dropCap:first-letter {
+  line-height: 0.68;
+  float: left;
+  font-size: 8.4em;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0.05em 0.1em 0 0;
+  text-transform: uppercase;
+}
+
+.p--right {
+  text-align: right;
+}
+
+.p--center {
+  text-align: center;
+}

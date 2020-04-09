@@ -1,0 +1,26 @@
+.avatar {
+  align-items: center;
+  display: flex;
+
+  & > .gatsby-image-wrapper {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  & > div {
+    color: var(--base);
+  }
+}
+
+.avatar--large {
+  & > .gatsby-image-wrapper {
+    height: 60px;
+    width: 60px;
+  }
+
+  & > div {
+    color: var(--base);
+    font-size: var(--h5);
+    font-weight: 400;
+  }
+}
