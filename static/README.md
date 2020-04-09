@@ -13,6 +13,8 @@ The WP Gatsby Starter project is a quick way to get off the ground with any new 
 - Fast build time
 - Paired WordPress theme
 
+[See the Demo](https://wgs.calvinkoepke.com)
+
 ## Why
 
 I've always had a major hurdle starting Gatsby projects because the initial setup is so laborsome when pulling your data from a WordPress site. Plugins like [gatsby-source-wordpress]() certainly make this easier, but it currently uses the REST API, and has a slow build.
