@@ -82,6 +82,8 @@ The WordPress directory contains the related theme that should be used in conjun
 This is the chunk of the starter project. It includes everything you need to get up and running, and assumes that your WordPress website is utilizing the WP theme above.
 
 A quick look inside the `src` directory:
+
+```
 .
 ├── assets
 ├── components
@@ -89,6 +91,7 @@ A quick look inside the `src` directory:
 ├── helpers
 ├── pages
 └── templates
+```
 
 1.  **`/assets`**: This directory contains images and the base CSS file for your static build.
 
