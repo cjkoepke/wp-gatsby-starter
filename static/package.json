@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "wp-gatsby-starter",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A WP + Gatsby Starter Project",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Calvin Koepke <hello@calvinkoepke.com>",
   "dependencies": {
     "gatsby": "^2.20.14",
     "gatsby-image": "^2.3.2",
@@ -47,9 +47,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/cjkoepke/wp-gatsby-starter"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/cjkoepke/wp-gatsby-starter/issues"
   }
 }
