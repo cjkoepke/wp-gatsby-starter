@@ -1,99 +1,116 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's default starter
+  WP Gatsby Starter
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+## Highlights
+
+The WP Gatsby Starter project is a quick way to get off the ground with any new WordPress website. It's a modern setup and so only includes certain support, though it will grow over time to support more.
+
+- Local Image Support
+- Gutenberg Support
+- Post and Page generation
+- Simple CSS support
+- Fast build time
+- Paired WordPress theme
+
+## Why
+
+I've always had a major hurdle starting Gatsby projects because the initial setup is so laborsome when pulling your data from a WordPress site. Plugins like [gatsby-source-wordpress]() certainly make this easier, but it currently uses the REST API, and has a slow build.
+
+Eventually, they will support [WP GraphQL](https://github.com/wp-graphql/wp-graphql), and when that happens, I will switch this theme over to use it.
+
+Regardless, setting up the styles, components, and overall architecture takes time. This project looks to join both the **WordPress environment as well as the Gatsby project** together.
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
-## 🚀 Quick start
+## Getting Started
 
-1.  **Create a Gatsby site.**
+1.  **Clone the Project**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
-
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
-
-1.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
+    Clone the GitHub project to your local machine.
 
     ```shell
-    cd my-default-starter/
-    gatsby develop
+    git clone git@github.com:cjkoepke/wp-gatsby-starter.git
     ```
 
-1.  **Open the source code and start editing!**
+2.  **Setup WordPress Install**
+
+    First, you'll need to install the associated theme in `/theme`. You may want to create a zip file first in order to upload, or you can move the file to your host with an SFTP/FTP connection.
+
+    Next, you'll need to install the following plugins;
+
+    - [WP GraphQL](https://github.com/wp-graphql/wp-graphql)
+    - [WP GraphQL Gutenberg](https://github.com/pristas-peter/wp-graphql-gutenberg)
+
+3.  **Update the Gatsby Settings**
+
+    Inside the `/static/gatsby-config.js` file, change the following:
+
+    ```js
+    options: {
+      typeName: "WPGraphQL",
+      fieldName: "wpgraphql",
+      url: `YOUR_DOMAIN/graphql`,
+    }
+    ```
+
+4.  **Start Developing!**
+
+    ```shell
+    # Install dependencies (only the first time)
+    npm install
+
+    # From the /static directory
+    npm run develop
+    ```
 
     Your site is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`\_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## Project Hierarchy
 
-## 🧐 What's inside?
+The WGS project is divided into two categories:
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+- WordPress
+- Static
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+### WordPress
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+The WordPress directory contains the related theme that should be used in conjunction with the Gatsby starter project. This **helps you control what blocks are available** and avoids running into unintended behavior when generating your static build (i.e. a block isn't supported and therefore skipped).
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+### Static (Gatsby)
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+This is the chunk of the starter project. It includes everything you need to get up and running, and assumes that your WordPress website is utilizing the WP theme above.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+A quick look inside the `src` directory:
+.
+├── assets
+├── components
+├── data
+├── helpers
+├── pages
+└── templates
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+1.  **`/assets`**: This directory contains images and the base CSS file for your static build.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+2.  **`/components`**: This directory contains all the components throughout the starter project that can be used, including the main Layout component that wraps page content.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+3.  **`/data`**: This file includes helpful details like GraphQL fragments that are used throughout queries, as well as custom hooks for easily grabbing static data like Site Title and Description within a component.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+4.  **`/helpers`**: This includes helper functions used within components to determine things like whether or not a link is relative and should be converted to a local link, and any Higher-Order-Components that abstract this functionality away.
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+5.  **`/pages`**: Currently, this file only indcludes the home page template for the static build, and the 404 template.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+6.  **`/templates`**: This is where you'll add template files that are used in `gatsby-node.js` when generating pages and posts from your WordPress install. Think of them like page templates.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+## Roadmap
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+There is still plenty to do here, including:
 
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+- Add Full Gutenberg Block Support
+  - Eventually break this out into a compnent library.
+- Support legacy content in the original editor.
+- More robust image support for different scenarios.
+- Possibly adopt CSS Modules (open for debate).
+- Create internal functions to easily handle common tasks, like generating Pages.
