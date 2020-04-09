@@ -115,3 +115,5 @@ There is still plenty to do here, including:
 - More robust image support for different scenarios.
 - Possibly adopt CSS Modules (open for debate).
 - Create internal functions to easily handle common tasks, like generating Pages.
+
+**I'm very open to PR's and additional help!** [Contribute](https://github.com/cjkoepke/wp-gatsby-starter/pulls)
