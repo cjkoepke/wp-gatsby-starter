@@ -2,6 +2,8 @@
   WP Gatsby Starter
 </h1>
 
+**NOTE: This project is retired. For a better experience, use this [Gatsby Starter Theme](https://github.com/cjkoepke/gatsby-theme-wp-scaffold)**
+
 ## Highlights
 
 The WP Gatsby Starter project is a quick way to get off the ground with any new WordPress website. It's a modern setup and so only includes certain support, though it will grow over time to support more.
